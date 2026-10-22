@@ -1,0 +1,98 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(252, 251, 240);
+    margin: 0;
+    padding: 0;
+}
+
+#pai {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#labubu {
+    width: 100%;
+    background-color: black;
+    padding: 12px;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+}
+
+#titulo {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin-right: 0;
+    font-size: 36px;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+}
+
+#links {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+#alecrim {
+    display: flex;
+    flex-grow: 1;
+}
+
+#bao {
+    flex: 6;
+    padding: 24px;
+    font-size: 18px;
+    text-wrap-style: wrap;
+}
+
+#bao p {
+        text-indent: 48px;
+        text-align: justify;
+}
+
+#musica {
+    font-style: italic; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+#musicas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wm {
+    display: flex;
+    padding: 12px;
+    gap: 8px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#joja {
+    flex: 1;
+    background-color: black;
+}
