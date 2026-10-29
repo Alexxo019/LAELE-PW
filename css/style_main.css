@@ -19,7 +19,7 @@ body {
 
 #labubu {
     width: 100%;
-    background-color: black;
+    background-color: rgb(17, 16, 24);
     padding: 12px;
     margin-bottom: auto;
     display: flex;
@@ -61,7 +61,7 @@ body {
 }
 
 #bao {
-    flex: 6;
+    flex: 7;
     padding: 24px;
     font-size: 18px;
 }
@@ -94,16 +94,23 @@ body {
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.wmz h3, .wmz p {
+.wm:hover {
+    transform: scale(1.1);
+}
+
+.wmz h3, .wmz p, .wm img {
     text-indent: 0px;
     font-weight: normal;
     display: flex;
     flex-direction: column;
+    border-radius: 2px;
 }
 
 #joja {
     flex: 1;
-    background-color: black;
+    background-color: rgb(17, 16, 24);
 }
