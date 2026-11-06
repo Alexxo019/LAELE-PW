@@ -5,7 +5,7 @@
 
 body {
     height: 100vh;
-    background-color: rgb(17, 16, 24);
+    background-color: rgb(252, 251, 240);
     margin: 0;
     padding: 0;
 }
@@ -14,13 +14,65 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #cartao {
-    background-color: aliceblue;
+    background-color: rgb(17, 16, 24);
+    color: white;
+    padding: 24px;
+    border-radius: 6px;
+}
+
+form {
     display: flex;
     flex-direction: column;
+    font-size: 24px;
+    gap: 48px;
+}
+
+.futebol {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.futebol label {
+    cursor: pointer;
+}
+
+.texto {
+    width: 800px;      
+    padding: 12px 14px;   
+    font-size: 16px;      
+    border: 1px solid #444;
+    border-radius: 6px; 
+    color: rgb(17, 16, 24);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.texto:placeholder-shown {
+    font-style: italic;
+}
+
+#botoes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.botao {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+    font-size: 24px;
+    padding: 18px 12px;
+    border-radius: 24px;
 }

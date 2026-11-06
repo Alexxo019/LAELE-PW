@@ -11,23 +11,37 @@
 
 <body>
 
-    <div id="#pai"> 
+    <div id="pai"> 
 
         <main id="cartao">
 
             <form>
 
-                <label for="nome"> Nome completo: </label>
-                <input type="text" id="nome" placeholder="Escreva seu nome aqui..." required>
+                <div class="futebol">
+                    <label for="nome"> Nome completo: </label>
+                    <input type="text" id="nome" placeholder="Escreva seu nome aqui..." required class="texto">
+                </div>
 
-                <label for="email"> Nome completo: </label>
-                <input type="email" id="email" placeholder="IInsira seu email aqui..." required>
+                <div class="futebol">
+                <label for="email"> Email: </label>
+                <input type="email" id="email" placeholder="IInsira seu email aqui..." required class="texto">
+                </div>
 
+                <div class="futebol">
                 <label for="senha"> Crie uma senha: </label>
-                <input type="password" id="senha" placeholder="Insira sua senha aqui..." required>
+                <input type="password" id="senha" placeholder="Insira sua senha aqui..." required class="texto">
+                </div>
 
-                <button type="reset"> Cancelar </button>
-                <button type="submit"> Enviar </button>
+                <div class="futebol">
+                <label for="senha"> Confirme a senha: </label>
+                <input type="password" id="senha" placeholder="Repita sua senha..." required class="texto">
+                </div>
+
+
+                <div id="botoes">
+                <button type="reset" id="kank" class="botao"> Cancelar </button>
+                <button type="submit" id="son" class="botao"> Confirmar </button>
+                </div>
 
             </form> 
 

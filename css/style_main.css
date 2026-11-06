@@ -114,3 +114,38 @@ body {
     flex: 1;
     background-color: rgb(17, 16, 24);
 }
+
+.cachoeira-container {
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: rgb(17, 16, 24);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.cachoeira-wrapper {
+    display: flex;
+    flex-direction: column;
+    animation: descerCachoeira 30s linear infinite;
+}
+
+/* Estilização individual das imagens */
+.cachoeira-wrapper img {
+    width: 200px;
+    height: 200px;
+    border-bottom: 15px solid #111;
+    object-fit: cover;  
+    flex-shrink: 0;      
+    cursor: pointer;
+}
+
+@keyframes descerCachoeira {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(-50% - 25px));
+    }
+}
