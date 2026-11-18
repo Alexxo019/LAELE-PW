@@ -41,6 +41,7 @@ body {
 #links {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-grow: 1;
 }
 
@@ -54,6 +55,46 @@ body {
 .link:hover {
     text-decoration: underline;
 }
+
+
+.dropdown-album {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.dropdown-conteudo {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(17, 16, 24);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dropdown-conteudo a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-conteudo a:hover {
+    background-color: rgb(38, 36, 52);
+}
+
+.dropdown-album:hover .dropdown-conteudo {
+    display: flex;
+}
+
 
 #alecrim {
     display: flex;
@@ -131,7 +172,6 @@ body {
     animation: descerCachoeira 30s linear infinite;
 }
 
-/* Estilização individual das imagens */
 .cachoeira-wrapper img {
     width: 200px;
     height: 200px;
