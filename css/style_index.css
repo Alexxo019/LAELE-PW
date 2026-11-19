@@ -23,6 +23,7 @@ body {
     color: white;
     padding: 24px;
     border-radius: 6px;
+    box-shadow: 4px 4px 8px black;
 }
 
 form {

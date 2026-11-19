@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_index.css">
 
-    <title> Cadrasto </title>
+    <title> Cadastro </title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 
         <main id="cartao">
 
-            <form>
+            <form id="form">
 
                 <div class="futebol">
                     <label for="nome"> Nome completo: </label>
@@ -23,24 +23,23 @@
                 </div>
 
                 <div class="futebol">
-                <label for="email"> Email: </label>
-                <input type="email" id="email" placeholder="IInsira seu email aqui..." required class="texto">
+                    <label for="email"> Email: </label>
+                    <input type="email" id="email" placeholder="Insira seu email aqui..." required class="texto">
                 </div>
 
                 <div class="futebol">
-                <label for="senha"> Crie uma senha: </label>
-                <input type="password" id="senha" placeholder="Insira sua senha aqui..." required class="texto">
+                    <label for="senha"> Crie uma senha: </label>
+                    <input type="password" id="senha" placeholder="Insira sua senha aqui..." required class="texto">
                 </div>
 
                 <div class="futebol">
-                <label for="senha"> Confirme a senha: </label>
-                <input type="password" id="senha" placeholder="Repita sua senha..." required class="texto">
+                    <label for="senha2"> Confirme a senha: </label>
+                    <input type="password" id="senha2" placeholder="Repita sua senha..." required class="texto">
                 </div>
-
-
+                
                 <div id="botoes">
-                <button type="reset" id="kank" class="botao"> Cancelar </button>
-                <button type="submit" id="son" class="botao"> Confirmar </button>
+                    <button type="reset" id="kank" class="botao"> Cancelar </button>
+                    <button type="submit" id="son" class="botao"> Confirmar </button>
                 </div>
 
             </form> 
@@ -48,7 +47,29 @@
         </main>
 
     </div>
-    <a href="main.html"> Vai para página </a>
+
+    <script>
+        const form = document.getElementById("form");
+        const msg = document.querySelector(".msg");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const { nome, email, senha, senha2 } = form.elements;
+
+            if (nome.value.trim() === "" || email.value.trim() === "") {
+                alert("Escreva os campos corretamente")
+                return;
+            }
+
+            if (senha.value !== senha2.value) {
+                alert("As senhas não coincidem")
+                return;
+            }
+
+            window.location.href = "main.html";
+        });
+    </script>
+
 </body>
 
 </html>

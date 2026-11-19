@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbuns - Tudo Sonoro♫</title>
+    <link rel="stylesheet" href="css/albuns.css">
+    <script src="js/albuns.js"></script>
+</head>
+
+<body>
+
+    <div id="pai">
+        <header id="labubu">
+            <a id="titulo" href="main.html"> Tudo Sonoro♫ </a>
+            <div id="links">
+                <a class="link" href=""> Músicas </a>
+                <div class="dropdown-album">
+                    <a class="link" href="albuns.html"> Albums </a>
+                    <div class="dropdown-conteudo">
+                        <a href="albuns.html?genero=pop">Pop</a>
+                        <a href="albuns.html?genero=rock">Rock</a>
+                        <a href="albuns.html?genero=mpb">MPB</a>
+                        <a href="albuns.html?genero=todos">Todos os Álbuns</a>
+                    </div>
+                </div>
+
+                <a class="link" href="#"> Artistas </a>
+            </div>
+        </header>
+
+        <main id="alecrim">
+            <section id="bao">
+                <h2 id="musica">Catálogo de Álbuns</h2>
+
+                <div class="filtros">
+                    <button class="btn-filtro ativo" onclick="filtrarAlbuns('todos', this)">Todos</button>
+                    <button class="btn-filtro" onclick="filtrarAlbuns('pop', this)">Pop</button>
+                    <button class="btn-filtro" onclick="filtrarAlbuns('rock', this)">Rock</button>
+                    <button class="btn-filtro" onclick="filtrarAlbuns('mpb', this)">MPB</button>
+                </div>
+
+                <section id="musicas">
+                    
+                    <article class="wm" data-genero="pop">
+                        <div>
+                            <img width="150px" height="150px" alt="Born To Die" src="img/LanaDelRey_BornToDie_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>Born To Die - Lana Del Rey</h3>
+                            <p>Gênero: Pop</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="pop">
+                        <div>
+                            <img width="150px" height="150px" alt="Thriller" src="img/Michael_Jackson_-_Thriller_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>Thriller - Michael Jackson</h3>
+                            <p>Gênero: Pop</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="pop">
+                        <div>
+                            <img width="150px" height="150px" alt="In The Zone" src="img/Britney_Spears-In_the_Zone_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>In The Zone - Britney Spears</h3>
+                            <p>Gênero: Pop</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="rock">
+                        <div>
+                            <img width="150px" height="150px" alt="AM" src="img/Artic_Monkeys-AM_ALBM.jpeg">
+                        </div>
+                        <div class="wmz">
+                            <h3>AM - Arctic Monkeys</h3>
+                            <p>Gênero: Rock / Alternativo</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="rock">
+                        <div>
+                            <img width="150px" height="150px" alt="Toxicity" src="img/SystemofaDownToxicity_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>Toxicity - System Of A Down</h3>
+                            <p>Gênero: Rock / Metal Alternativo</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="rock">
+                        <div>
+                            <img width="150px" height="150px" alt="Hybrid Theory" src="img/Linkin_Park_Hybrid_Theory_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>Hybrid Theory - Linkin Park</h3>
+                            <p>Gênero: Rock / Nu Metal</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="mpb">
+                        <div>
+                            <img width="150px" height="150px" alt="Tribalistas" src="img/Tribalistas_capa_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>Tribalistas (2002)</h3>
+                            <p>Gênero: MPB / Samba</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="mpb">
+                        <div>
+                            <img width="150px" height="150px" alt="Cartola II" src="img/Cartola1976_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>Cartola II (1976)</h3>
+                            <p>Gênero: MPB / Samba</p>
+                        </div>
+                    </article>
+
+                    <article class="wm" data-genero="mpb">
+                        <div>
+                            <img width="150px" height="150px" alt="Músicas para Churrasco Vol. 1" src="img/Capa_de_Músicas_para_Churrasco,_Vol._1_ALBM.jpg">
+                        </div>
+                        <div class="wmz">
+                            <h3>Músicas para Churrasco Vol. 1</h3>
+                            <p>Gênero: MPB</p>
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
