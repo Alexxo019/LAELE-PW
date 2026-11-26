@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artistas - Tudo Sonoro♫</title>
     <link rel="stylesheet" href="css/artista.css">
+    <script src="js/artistas.js" defer></script>
 </head>
+
 <body>
     <div id="container-principal">
         <header id="cabecalho">
             <a id="titulo" href="main.html">Tudo Sonoro♫</a>
             <nav id="links">
-                <a class="link" href="">Músicas</a>
+                <a class="link" href="musicas.html">Músicas</a>
                 <div class="dropdown-album">
                     <a class="link" href="albuns.html">Álbuns</a>
                     <div class="dropdown-conteudo">
@@ -30,7 +33,7 @@
                 <h2 id="titulo-secao">Catálogo de Artistas</h2>
 
                 <section id="grade-artistas">
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Cantora e compositora nipo-americana conhecida por suas letras emotivas e som indie rock melancólico.">
                         <img width="150" height="150" alt="Mitski" src="img/M-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>Mitski</h3>
@@ -38,7 +41,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Grupo feminino sul-coreano famoso pela estética nostálgica dos anos 90/2000 e batidas suaves de R&B e pop.">
                         <img width="150" height="150" alt="NewJeans" src="img/NWJNS-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>NewJeans</h3>
@@ -46,7 +49,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Cantora e multi-instrumentista islandesa que mistura jazz clássico, bossa nova e pop moderno.">
                         <img width="150" height="150" alt="Laufey" src="img/L-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>Laufey</h3>
@@ -54,7 +57,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Projeto musical do brasileiro Vito (Gemaplys), transitando entre o rap, lo-fi e letras introspectivas ou bem-humoradas.">
                         <img width="150" height="150" alt="Yun Li" src="img/YL-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>Yun Li</h3>
@@ -62,7 +65,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Artista da cena underground brasileira conhecido por produções experimentais e humor ácido no trap.">
                         <img width="150" height="150" alt="Link do Zap" src="img/LDZ-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>Link do Zap</h3>
@@ -70,7 +73,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Um dos maiores nomes do shit-trap nacional, famoso pelas letras satíricas e batidas pesadas.">
                         <img width="150" height="150" alt="LUCKHAOS" src="img/LKS-ARTISTA.jpg">
                         <div class="card-info">
                             <h3>LUCKHAOS</h3>
@@ -78,7 +81,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Rapper, produtor e designer norte-americano aclamado por sua criatividade sonora e visual no hip-hop.">
                         <img width="150" height="150" alt="Tyler the Creator" src="img/TC-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>Tyler the Creator</h3>
@@ -86,7 +89,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Banda armênio-americana de metal alternativo conhecida por mudanças bruscas de ritmo e letras políticas.">
                         <img width="150" height="150" alt="System Of a Down" src="img/SOAD-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>System Of a Down</h3>
@@ -94,7 +97,7 @@
                         </div>
                     </article>
 
-                    <article class="card-artista">
+                    <article class="card-artista" data-descricao="Banda icônica do rock e nu metal que marcou gerações ao misturar guitarras pesadas, rap e elementos eletrônicos.">
                         <img width="150" height="150" alt="Linkin Park" src="img/LP-ARTISTA.jfif">
                         <div class="card-info">
                             <h3>Linkin Park</h3>
@@ -105,5 +108,17 @@
             </section>
         </main>
     </div>
+
+    <div id="fundo-balao" class="oculto">
+        <div id="balao-artista">
+            <button id="fechar-balao" title="Fechar">&times;</button>
+            <img id="balao-img" src="" alt="">
+            <h2 id="balao-nome"></h2>
+            <p id="balao-genero"></p>
+            <p id="balao-descricao"></p>
+        </div>
+    </div>
+
 </body>
+
 </html>

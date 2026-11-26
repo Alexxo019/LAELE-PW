@@ -152,3 +152,96 @@ body {
     font-size: 16px;
     color: #555;
 }
+
+#fundo-balao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 16, 24, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#fundo-balao.oculto {
+    display: none;
+}
+
+#balao-artista {
+    background-color: rgb(252, 251, 240);
+    color: rgb(17, 16, 24);
+    padding: 28px 24px;
+    border-radius: 12px;
+    border-top: 6px solid rgb(17, 16, 24);
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+    animation: aparecer 0.2s ease-out;
+}
+
+#fechar-balao {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: rgb(17, 16, 24);
+    transition: transform 0.2s ease;
+}
+
+#fechar-balao:hover {
+    transform: scale(1.15);
+}
+
+#balao-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 14px;
+}
+
+#balao-nome {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 0 6px 0;
+    color: rgb(17, 16, 24);
+}
+
+#balao-genero {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin: 0 0 16px 0;
+}
+
+#balao-descricao {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+    margin: 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(17, 16, 24, 0.15);
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

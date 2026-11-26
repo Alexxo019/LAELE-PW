@@ -4,24 +4,23 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(252, 251, 240);
     margin: 0;
-    padding: 0;
+    padding: 0 0 90px 0;
 }
 
-#pai {
+#container-principal {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-#labubu {
+#cabecalho {
     width: 100%;
     background-color: rgb(17, 16, 24);
     padding: 12px;
-    margin-bottom: auto;
     display: flex;
     align-items: center;
 }
@@ -29,7 +28,6 @@ body {
 #titulo {
     font-family: 'Times New Roman', Times, serif;
     color: white;
-    margin-right: 0;
     font-size: 36px;
     text-decoration: none;
     font-style: italic;
@@ -55,7 +53,6 @@ body {
 .link:hover {
     text-decoration: underline;
 }
-
 
 .dropdown-album {
     position: relative;
@@ -91,101 +88,116 @@ body {
     background-color: rgb(38, 36, 52);
 }
 
-.dropdown-album:hover .dropdown-conteudo {
+.dropdown-album:hover .dropdown-conteudo,
+.dropdown-album:focus-within .dropdown-conteudo {
     display: flex;
 }
 
-
-#alecrim {
+#conteudo-principal {
     display: flex;
     flex-grow: 1;
 }
 
-#bao {
-    flex: 7;
+#secao-catalogo {
+    flex: 1;
     padding: 24px;
     font-size: 18px;
 }
 
-.baoz {
-    text-indent: 48px;
-    text-align: justify;
-}
-
-#musica {
-    font-style: italic; 
+#titulo-secao {
+    font-style: italic;
     font-family: 'Times New Roman', Times, serif;
     font-size: 36px;
+    margin: 0 0 32px 65px;
 }
 
-#musicas {
+#grade-artistas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    row-gap: 64px;
+    row-gap: 40px;
+    column-gap: 20px;
 }
 
-.wm {
+.card-artista {
     width: 475px;
     height: 175px;
     display: flex;
+    align-items: center;
     padding: 12px;
-    gap: 8px;
+    gap: 16px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    font-size: 24px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-.wm:hover {
-    transform: scale(1.1);
+.card-artista:hover {
+    transform: scale(1.05);
 }
 
-.wmz h3, .wmz p, .wm img {
-    text-indent: 0px;
-    font-weight: normal;
-    display: flex;
-    flex-direction: column;
-    border-radius: 2px;
+
+.capa {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
 }
 
-#joja {
-    flex: 1;
-    background-color: rgb(17, 16, 24);
+.capa img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
 }
 
-.cachoeira-container {
-    height: 100vh;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    background-color: rgb(17, 16, 24);
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.cachoeira-wrapper {
-    display: flex;
-    flex-direction: column;
-    animation: descerCachoeira 30s linear infinite;
-}
-
-.cachoeira-wrapper img {
-    width: 200px;
-    height: 200px;
-    border-bottom: 15px solid #111;
-    object-fit: cover;  
-    flex-shrink: 0;      
+.btn-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(17, 16, 24, 0.85);
+    color: white;
+    font-size: 22px;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
-@keyframes descerCachoeira {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(calc(-50% - 25px));
-    }
+.card-artista:hover .btn-play,
+.btn-play:focus-visible,
+.card-artista.tocando .btn-play {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-play:hover {
+    background-color: rgb(38, 36, 52);
+}
+
+.card-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+
+#player-spotify {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
 }
